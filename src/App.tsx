@@ -1,7 +1,21 @@
 import React from 'react';
 import './App.css';
 
-const order: {title: string, quanitity: number} = {title: 'margarita', quanitity: 10}
+type Order = {
+  title: string,
+  quantity?: number
+}
+
+const order: Order = {title: 'margarita', quantity: 10}
+
+const orders: Order[] = [
+  {title: 'margarita'},
+  {title: 'salami', quantity: 10}
+];
+
+let number: null | number = null
+
+number = 10
 
 function App() {
   return (
