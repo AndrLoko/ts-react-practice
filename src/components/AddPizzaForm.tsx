@@ -12,12 +12,20 @@ const AddPizzaForm: FC = () => {
      useState<{title: string, price: string, img: string}>(initState)
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log('handle change >> ', e.target)
+        const { name, value } = e.target;
+
+        setNewPizza({
+            ...newPizza,
+            [name]: value
+        })
     }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
         console.log('handle change >> ', e.target)
     }
+
+    console.log('new pizza>>>', newPizza)
 
     return (
         <form onSubmit={handleSubmit}>
