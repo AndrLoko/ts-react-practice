@@ -4,7 +4,7 @@ import Pizza from './models/Pizza';
 import './App.css';
 
 const App: FC = () => {
-  const [pizzasList, setPizzasList] = useState([])
+  const [pizzasList, setPizzasList] = useState<Pizza[]>([])
 
   const addPizza = (newPizza: Pizza) => {
     setPizzasList([...pizzasList, newPizza]);
